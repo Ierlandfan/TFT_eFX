@@ -27,7 +27,7 @@ class TFT_eFX : public TFT_eSPI {
 	
 //File functions
 
-void TFT_eFX::drawBMP(String filename, uint8_t x, uint16_t y);
+void drawBMP(String filename, int16_t x, int16_t y);
 
   private:
 
