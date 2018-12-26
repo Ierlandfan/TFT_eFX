@@ -19,7 +19,7 @@ TFT_eFX  efx = TFT_eFX(&tft);    // Create TFT_eFX object "efx" with pointer to 
 // =========================================================================
 void setup(void) {
 
-  Serial.begin(250000);
+  Serial.begin(115200);
 
   tft.init();
 
@@ -31,12 +31,7 @@ void setup(void) {
 // =========================================================================
 void loop() {
 
-  uint16_t x = random(100);
-  uint16_t y = random(100);
-
-  uint16_t color = random(0x10000); // Random 16 bit color 0 - 0xFFFF
-
-  // This example demo function draws a 3x3 block centered on x,y
+  // This example draws parrot.bmp to the tft
   efx.drawBMP("/parrot.bmp", 100, 100);
   
   delay(200);
