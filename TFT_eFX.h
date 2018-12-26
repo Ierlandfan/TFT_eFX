@@ -12,6 +12,7 @@
 // See license.txt in root folder of library
 /***************************************************************************************/
 
+#define BUFFPIXEL 20
 class TFT_eFX : public TFT_eSPI {
 
  public:
@@ -23,9 +24,10 @@ class TFT_eFX : public TFT_eSPI {
            // Draw a bezier curve of a defined colour between specified points
   void     drawBezier(int32_t x0, int32_t y0, int32_t x1, int32_t y1, int32_t x2, int32_t y2, uint16_t color);  
   void     drawBezierSegment(int32_t x0, int32_t y0, int32_t x1, int32_t y1, int32_t x2, int32_t y2, uint16_t color);
+	
+//File functions
 
-            //bitmap drawing from SPIFFS function
- void drawBMP(String filename, uint8_t x, uint16_t y);
+void TFT_eFX::drawBMP(String filename, uint8_t x, uint16_t y);
 
   private:
 
