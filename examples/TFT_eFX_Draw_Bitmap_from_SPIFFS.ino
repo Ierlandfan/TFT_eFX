@@ -37,7 +37,7 @@ void loop() {
   uint16_t color = random(0x10000); // Random 16 bit color 0 - 0xFFFF
 
   // This example demo function draws a 3x3 block centered on x,y
-  efx.drawBmp("/parrot.bmp", 100, 100);
+  efx.drawBMP("/parrot.bmp", 100, 100);
   
   delay(200);
 }
