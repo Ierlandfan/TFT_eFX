@@ -165,9 +165,9 @@ uint32_t read32(fs::File &f) {
 
 
 
-void drawBMP(const char *filename, int16_t x, int16_t y) {
+void TFT_eFX::drawBMP(const char *filename, int16_t x, int16_t y) {
 
-  if ((x >= _tft.width()) || (y >= _tft.height())) return;
+  if ((x >= _tft->width()) || (y >= _tft->height())) return;
 
   fs::File bmpFS;
 
@@ -199,7 +199,7 @@ void drawBMP(const char *filename, int16_t x, int16_t y) {
     {
       y += h - 1;
 
-      _tft.setSwapBytes(true);
+      _tft->setSwapBytes(true);
       bmpFS.seek(seekOffset);
 
       uint16_t padding = (4 - ((w * 3) & 3)) & 3;
