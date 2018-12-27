@@ -165,7 +165,7 @@ uint32_t read32(fs::File &f) {
 
 
 
-void drawBMP(String filename, int16_t x, int16_t y) {
+void TFT_eFX::drawBMP(const char *filename, int16_t x, int16_t y) {
 
   if ((x >= _tft->width()) || (y >= _tft->height())) return;
 
